@@ -1,0 +1,29 @@
+package com.atguigu.bean;
+
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+import java.io.Serializable;
+
+@Data
+public class SpuSaleAttrValue implements Serializable {
+
+    @Id
+    @Column
+    String id ;
+
+    @Column
+    String spuId;
+
+    @Column
+    String saleAttrId;
+
+    @Column
+    String saleAttrValueName;
+
+    //是否为默认选中值
+    @Transient
+    String isChecked;
+}
